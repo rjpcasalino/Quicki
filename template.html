@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Wiki: $title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <style>
+body {
+        font-family: sans-serif;
+        overflow: auto;
+	margin: 0 auto;
+}
+
+.header {
+        grid-area: header;
+}
+
+.content {
+        grid-area: content;
+}
+
+.wrapper {
+        display: grid;
+        grid-template-areas:
+                "header"
+                "content"
+}
+  </style>
+</head>
+<body>
+<div class="wrapper">
+<h1>
+  <img src="/assets/imgs/sonic.gif" alt="wiki logo"/>
+  <a href="search.cgi?search=$page">$title</a>
+</h1>
+<p>
+$body
+</p>
+<p>$action</p>
+<p>$summary</p>
+      -- Return to <a href=wiki.cgi?WelcomeVisitors>WelcomeVisitors</a></small>
+</div>
+</body>
+</html>
