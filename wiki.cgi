@@ -5,7 +5,9 @@
 # ... and then only
 # with the understanding that the owner(s) cannot be
 # responsible for any behavior of the program or
-# any damages that it may cause. See LICENSE.TXT
+# any damages that it may cause.
+#
+# Copyright 2020, Ryan Casalino
 
 #use strict;
 
