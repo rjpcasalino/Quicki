@@ -1,4 +1,4 @@
-#! /usr/bin/perl
+#! /usr/bin/perl -w
 # Copyright 1994-2000, Cunningham & Cunningham, Inc.
 # in collaboration with Dave W. Smith
 # Open Source for personal use only.
@@ -12,7 +12,7 @@
 #use strict;
 
 $|++;  # OUTPUT_AUTOFLUSH (if $| is non-zero)
-print "Content-type: text/html\n\n";
+print "Content-Type: text/html; charset=utf-8\n\n";
 
 my $mark = "\263";
 my $link = "[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+";
