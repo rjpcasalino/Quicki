@@ -1,27 +1,35 @@
 !! Abandon all hope, ye who enter here!
+[Search]
 
 This is just a toy wiki and isn't secure in any real sense of that word. Nothing is, sadly. In any case...
 
-Hey everyone, it's 2000 and we're gonna party as such!
-Thanks and enjoy!
+Hey, let's act like it's 1997 and party as such!
 
 It's relatively easy to make new pages and contribute!
-!! Using wiki's old markup style:
+!! Quick start using wiki markup:
+# [!] is an h1
+ thus "! Hello, beautiful world" would yield:
+! Hello, beautiful world 
 # [!!] is an h2
-# [!!!] an h3
-# ['\'2x single quotes means emphasize'\']. The backslash is an EscapeSequence.
+ and "!! Hello, again" would yield:
+!! Hello, again
+# [!!!] is an h3
+ so we'd get
+!!! bored yet?
+# 2x single quotes that bookend a sentence means emphasize ['']
 ** ''now is the time for all good men to come to the aid of their country.''
-# ['\'\'3x means strong'\'\']
+# 3x single quotes means strong [''']
 ** '''getting it?'''
-# just use CamelCase to get to other pages within the wiki
-## external links are funny because 25 years ago there was no HypertextTransferProtocolSecure (HTTPS), thus any URL with an `https` prefix will fail to be parsed as a valid link. I'll fix this later. Just use http (as most pages will reroute to the secure equivalent. Example:
-** http://www.boringtranquility.io/ 
-** I just fixed this by feeding `https` into the regex - RyanCasalino (4/15/20)
+
+# use CamelCase to get to other pages within the wiki
 
 Remember to follow CamelCase convention!
 
+See more here: MarkupSyntax
+
 ''see site changes'':
 * http:changes.cgi
-[Search]
+
+!!! Learn more
 * AboutThisWiki
 * RyanCasalino

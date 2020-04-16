@@ -9,34 +9,28 @@ body {
         overflow: auto;
 }
 
-.header {
-        grid-area: header;
-}
-
-.content {
-        grid-area: content;
-}
-
 .wrapper {
-        display: grid;
-        grid-template-areas:
-                "header"
-                "content";
 	margin: 0 auto;
 	padding: 1em;
+	max-width: 700px;
+}
+.std-btn {
+	background: #0064ffc7;
+	color: #fff;
+	font-size: 1.1em;
+	border: none;
+	font-weight: bold;
 }
   </style>
 </head>
 <body>
 <div class="wrapper">
-<h1>
-  <img src="https://66.media.tumblr.com/tumblr_mbe1y9WerA1riqzepo1_400.gifv" alt="wiki logo" height="200px" width="200px"/>
-  <a href="search.cgi?search=$page">$title</a>
-</h1>
+	<a href="/"><img src="https://media.giphy.com/media/hLOvQ8z3bRWQo/giphy.gif" alt="real world" height="200px" width="200px"/></a>
+  <h4><a href="search.cgi?search=$page">$title</a></h4>
 <p>
 $body
 </p>
-<p>$action</p>
+$action
 <p>$summary</p>
       -- Return to <a href=wiki.cgi?WelcomeVisitors>WelcomeVisitors</a></small>
 </div>

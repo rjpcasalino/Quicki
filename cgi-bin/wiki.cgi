@@ -44,7 +44,7 @@ if ( -e "pages/$page" ) {
 
  } else {
  $body = << "";
-  "$page" does not yet exist. <BR>
+  "$page" does not yet exist. <br>
   Use the <strong>Edit</strong> button to create it.
 
 }
@@ -53,7 +53,7 @@ $par{summary} = " -- Last edited $date" if $date;
 $par{body} = $body;
 $par{action} = << "";
  <form method=post action="edit.cgi?$page">
- <input type=submit value=" Edit ">
+ <input class="std-btn" type=submit value="Edit">
  </form>
 
 open (T, 'template.html') || die "template.html: $!";
@@ -90,11 +90,11 @@ sub FormatBody {
   $code = '';
   s/^\t+//;  # legacy pages with tab indented lists
   s/^\s*$/<p>/    && ($code = "...");
-  /^\s/           && ($body .= &EmitCode('PRE', 1));
+  /^\s/           && ($body .= &EmitCode('pre', 1));
 
 # - new list versions take left-edge multiple * or #
-  s/^(\*+)/<li>/  && ($body .= &EmitCode('UL', length $1));
-  s/^(\#+)/<li>/  && ($body .= &EmitCode('OL', length $1));
+  s/^(\*+)/<li>/  && ($body .= &EmitCode('ul', length $1));
+  s/^(\#+)/<li>/  && ($body .= &EmitCode('ol', length $1));
 # - allow left-edge : version of definition list, non-tabbed, non-greedy
   s/^(:+)(.+?):( +)/<dt>$2<dd>/  && ($body .= &EmitCode(DL, length $1));
 # - allow and transform literal "n." ordered lists, left-edge, one level
@@ -103,7 +103,8 @@ sub FormatBody {
   s/^!!!!//       && ($body .= &EmitCode('H4', 1));
   s/^!!!//        && ($body .= &EmitCode('H3', 1));
   s/^!!//         && ($body .= &EmitCode('H2', 1));
-  s/^\"\"//       && ($body .= &EmitCode('BLOCKQUOTE', 1));
+  s/^!//          && ($body .= &EmitCode('h1', 1));
+  s/^\"\"//       && ($body .= &EmitCode('blockquote', 1));
 
   $code  || ($body .= &EmitCode('', 0));
 
@@ -114,7 +115,7 @@ sub FormatBody {
   s/'{2}(.*?)'{2}/<em>$1<\/em>/g;
 
   s/\[Search\]/<form action=search.cgi><input type=text name=search size=40>
-   <input type="submit" value="Search"><\/form>/g;
+   <input class="std-btn" type="submit" value="Search"><\/form>/g;
 
   s/\b$link\b/&AsAnchor($&)/geo;  # $& = entire matched string
   s/$mark(\d+)$mark/&InPlaceUrl($1)/geo;

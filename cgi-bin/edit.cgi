@@ -35,9 +35,9 @@ if ( -e "pages/$page" ) {
 my %par;
 $par{page} = $page;
 $par{body} = << "";
-	<form method=post action="save.cgi?$page">
+	<form method="POST" action="save.cgi?$page">
 	<textarea name=Text rows=16 cols=60 wrap=virtual>$text</textarea>
-	<p><input type="submit" value=" Save ">
+	<p><input class="std-btn "type="submit" value="Save">
 	</form>
 
 open(T, 'template.html') or die "template.html: $!";

@@ -29,7 +29,7 @@ my $body = <<EOF;
    size="40"
    name="search"
    value="$target">
-  <input type="submit" value="Search">
+  <input class="std-btn" type="submit" value="Search">
  </form>
 EOF
 

@@ -1,11 +1,6 @@
 #! /usr/bin/perl
 # Copyright 1994-2000, Cunningham & Cunningham, Inc.
 # in collaboration with Dave W. Smith
-# Open Source for personal use only.
-# ... and then only
-# with the understanding that the owner(s) cannot be
-# responsible for any behavior of the program or
-# any damages that it may cause. See LICENSE.TXT
 
 # use strict;
 $|++;
@@ -51,7 +46,7 @@ print F;
 close(F);
 
 my %par;
-$par{title} = "Thank You";
+$par{title} = "Thanks!";
 $par{page} = $page;
 $par{body} = << "";
  The <a href=wiki.cgi?$page>$page</a> page has been saved.
